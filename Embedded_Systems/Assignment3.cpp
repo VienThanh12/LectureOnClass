@@ -64,45 +64,45 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  if(digitalRead(12) == HIGH){
+  if(digitalRead(12) == HIGH && y > 0){
     if(cnt_1 == 0){
       display.clearDisplay();
       display.display();
       y -= 1;
-      display.drawRect(x, y, 25, 25, WHITE);
+      display.drawRect(x, y, 20, 20, WHITE);
       display.display();
       cnt_1 = 1;
     }
   }
   
-  if(digitalRead(14) == HIGH){
+  if(digitalRead(14) == HIGH && x < 128 - 20){
     if(cnt_2 == 0){
       display.clearDisplay();
       display.display();
       x += 1;
-      display.drawRect(x, y, 25, 25, WHITE);
+      display.drawRect(x, y, 20, 20, WHITE);
       display.display();
       cnt_2 = 1;
     }
   }
   
-  if(digitalRead(19) == HIGH){
+  if(digitalRead(19) == HIGH && x > 0){
     if(cnt_3 == 0){
       display.clearDisplay();
       display.display();
       x -= 1;
-      display.drawRect(x, y, 25, 25, WHITE);
+      display.drawRect(x, y, 20, 20, WHITE);
       display.display();
       cnt_3 = 1;
     }
   }
   
-  if(digitalRead(18) == HIGH){
+  if(digitalRead(18) == HIGH && y < 64 - 20){
     if(cnt_4 == 0){
       display.clearDisplay();
       display.display();
       y += 1;
-      display.drawRect(x, y, 25, 25, WHITE);
+      display.drawRect(x, y, 20, 20, WHITE);
       display.display();
       cnt_4 = 1;
     }
